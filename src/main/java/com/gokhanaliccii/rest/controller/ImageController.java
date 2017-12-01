@@ -39,8 +39,7 @@ public class ImageController {
     @RequestMapping(value = "/putImage",method = RequestMethod.POST)
     public boolean storeFile(InputStream is) throws IOException {
 
-        String path = getClass().getResource("/test/abc.png").getFile();
-        File file = new File(path);
+        File file = new File("a.png");
         BufferedImage read = ImageIO.read(is);
 
         FileOutputStream fos = new FileOutputStream(file);
